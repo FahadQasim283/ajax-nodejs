@@ -1,18 +1,22 @@
-# Step 9: Complete CORS student application
+# Step 9: Complete CORS Student Application
 
-This is the first step with separate frontend and backend folders. Start the
-backend first:
+This step connects an Express backend with a jQuery frontend across different origins.
 
+### 1. Start the Backend API
+In your terminal:
 ```powershell
 cd backend
 npm install
 npm start
 ```
+The backend starts at <http://localhost:3004>.
 
-In a second terminal, open `frontend` with VS Code Live Server. Click
-**Load students**, then submit the form. The backend runs on port `3004` and
-the frontend runs on a different origin, so `cors()` allows the AJAX requests.
+### 2. Launch the Frontend
+In VS Code, open the `frontend` folder with Live Server (or open `frontend/index.html` in your browser).
 
-The POST example demonstrates request/response flow only; it does not save
-students permanently.
-
+### What this example demonstrates
+- **Cross-Origin Requests (CORS)**: The frontend running on Live Server origin can safely query the backend API running on port `3004`.
+- **AJAX GET Request**: Click **Load students** to retrieve the student roster from `/api/students`.
+- **AJAX POST Request**: Fill in the form and submit. The frontend sends JSON payload with `contentType: "application/json"`.
+- **Keyboard & Input Interactivity**: Press `Enter` to submit the form, and type in the search bar to filter the enrolled roster in real time.
+- **Dynamic DOM Updates**: On successful submission, the newly created student is automatically refreshed in the roster.

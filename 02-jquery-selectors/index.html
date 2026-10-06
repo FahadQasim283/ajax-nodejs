@@ -4,14 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step 2 - jQuery Selectors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="heading">Selector demonstration</h1>
-    <p class="student">Ali</p>
-    <p class="student">Usman</p>
-    <p>This paragraph has no class.</p>
-    <button id="showCount">Show selector counts</button>
-    <p id="output"></p>
+    <main class="container">
+        <header class="card-header">
+            <span class="badge">Step 02 &bull; jQuery Selectors</span>
+            <h2>Element, ID, and Class Selectors</h2>
+        </header>
+
+        <section class="card-body">
+            <!-- Target DOM Elements Stage -->
+            <div class="dom-stage">
+                <h1 id="heading">Selector demonstration</h1>
+
+                <div id="elementsContainer" class="elements-list">
+                    <p class="student">Ali</p>
+                    <p class="student">Usman</p>
+                    <p>This paragraph has no class.</p>
+                </div>
+            </div>
+
+            <!-- Interactive Selector Controls -->
+            <div class="controls-panel">
+                <div class="action-bar">
+                    <button id="showCount" class="btn btn-primary" type="button">📊 Show selector counts</button>
+                    <button id="highlightId" class="btn btn-outline" type="button">Highlight ID (#heading)</button>
+                    <button id="highlightClass" class="btn btn-outline" type="button">Highlight Class (.student)</button>
+                    <button id="highlightTag" class="btn btn-outline" type="button">Highlight Tag (&lt;p&gt;)</button>
+                    <button id="clearHighlights" class="btn btn-outline" type="button">Clear Highlights</button>
+                </div>
+
+                <!-- Dynamic Element Addition (DOM Events) -->
+                <div class="input-row">
+                    <input type="text" id="newStudentName" placeholder="Add a new student name..." autocomplete="off">
+                    <button id="addStudentBtn" class="btn btn-outline" type="button">+ Add Student Element</button>
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <p id="output"></p>
+        </section>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>

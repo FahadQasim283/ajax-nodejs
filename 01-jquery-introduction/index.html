@@ -4,10 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step 1 - jQuery Introduction</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="heading">Original heading</h1>
-    <p>Open the browser console after loading this page.</p>
+    <main class="container">
+        <header class="card-header">
+            <span class="badge">Step 01 &bull; jQuery Introduction</span>
+            <h2>Select Elements &amp; Listen to Events</h2>
+        </header>
+
+        <section class="card-body">
+            <!-- Hero Element Display -->
+            <div id="headingContainer" class="display-box" title="Click or hover to test mouse events!">
+                <h1 id="heading">Original heading</h1>
+                <span class="selector-tag">jQuery selector: $("#heading")</span>
+                <p class="hint-text">💡 Tip: Hover or click this box to trigger jQuery mouse events!</p>
+            </div>
+
+            <!-- Interactive Controls -->
+            <div class="controls-section">
+                <label class="section-label" for="customText">1. Live Input &amp; Keyboard Events</label>
+                <div class="input-group">
+                    <input type="text" id="customText" placeholder="Type new heading text in real time..." autocomplete="off">
+                    <button id="resetHeading" class="btn btn-outline" type="button">Reset</button>
+                </div>
+
+                <label class="section-label">2. jQuery Effects &amp; Animation Events</label>
+                <div class="btn-group">
+                    <button id="fadeToggleBtn" class="btn btn-outline" type="button">✨ Fade Toggle</button>
+                    <button id="slideToggleBtn" class="btn btn-outline" type="button">↕ Slide Toggle</button>
+                    <button id="colorCycleBtn" class="btn btn-primary" type="button">🎨 Cycle Color</button>
+                </div>
+            </div>
+
+            <!-- Live Event & DOM Logger -->
+            <div class="logger-card">
+                <div class="logger-header">
+                    <span class="logger-title">
+                        <span class="logger-dot"></span>
+                        Live jQuery &amp; DOM Activity Log
+                    </span>
+                    <button id="clearLogBtn" class="btn-clear" type="button">Clear</button>
+                </div>
+                <ul id="eventLog" class="log-list"></ul>
+            </div>
+        </section>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>

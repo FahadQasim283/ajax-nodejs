@@ -4,13 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step 3 - jQuery DOM and Events</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Student greeting</h1>
-    <label for="name">Name</label>
-    <input id="name" type="text" placeholder="Enter your name">
-    <button id="showName">Show name</button>
-    <p id="message"></p>
+    <main class="container">
+        <header class="card-header">
+            <span class="badge">Step 03 &bull; DOM &amp; Events</span>
+            <h1>Student greeting</h1>
+        </header>
+
+        <section class="card-body">
+            <div class="form-group">
+                <label for="name">
+                    <span>Name</span>
+                    <span id="charCount" class="char-counter">0 chars</span>
+                </label>
+                <div class="input-wrapper">
+                    <input id="name" type="text" placeholder="Enter your name" autocomplete="off">
+                </div>
+
+                <!-- Preset Quick Test Chips -->
+                <div class="presets-row">
+                    <span class="presets-label">Quick fill:</span>
+                    <button class="chip" type="button" data-name="Ali">Ali</button>
+                    <button class="chip" type="button" data-name="Fatima">Fatima</button>
+                    <button class="chip" type="button" data-name="Usman">Usman</button>
+                    <button class="chip" type="button" data-name="Zainab">Zainab</button>
+                </div>
+            </div>
+
+            <div class="button-row">
+                <button id="showName" class="btn btn-primary" type="button">✨ Show name</button>
+                <button id="clearName" class="btn btn-secondary" type="button">Clear</button>
+            </div>
+
+            <!-- Real-time Event Monitor -->
+            <div class="event-indicator">
+                <span>Active Event:</span>
+                <span id="activeEvent" class="event-tag">waiting for user input</span>
+            </div>
+
+            <!-- Greeting Output Display -->
+            <p id="message"></p>
+        </section>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>

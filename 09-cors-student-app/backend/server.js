@@ -22,6 +22,12 @@ app.post("/api/students", function (request, response) {
         return;
     }
 
+    // Assign new unique ID and append to in-memory array for realistic interactive experience
+    const newId = students.length > 0 ? Math.max(...students.map(s => s.id)) + 1 : 1;
+    student.id = newId;
+    student.age = Number(student.age);
+    students.push(student);
+
     response.status(201).json({
         message: "Student received successfully",
         student: student

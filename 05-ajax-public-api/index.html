@@ -4,12 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step 5 - AJAX Public API</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Products</h1>
-    <button id="loadProducts">Load products</button>
-    <p id="status"></p>
-    <div id="products"></div>
+    <main class="container">
+        <header class="card-header">
+            <span class="badge">Step 05 &bull; jQuery AJAX GET</span>
+            <h1>Products</h1>
+        </header>
+
+        <section class="card-body">
+            <!-- Action & Controls Toolbar -->
+            <div class="toolbar">
+                <button id="loadProducts" class="btn btn-primary" type="button">🛒 Load products</button>
+                <select id="productLimit" class="select-control" title="Number of products to fetch">
+                    <option value="5" selected>Limit: 5 items</option>
+                    <option value="8">Limit: 8 items</option>
+                    <option value="12">Limit: 12 items</option>
+                </select>
+                <input type="text" id="searchProducts" class="search-input" placeholder="Search loaded products by title or category..." autocomplete="off">
+            </div>
+
+            <!-- Status Banner -->
+            <p id="status"></p>
+
+            <!-- Products Grid -->
+            <div id="products"></div>
+        </section>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>

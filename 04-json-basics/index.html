@@ -4,11 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step 4 - JSON Basics</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Students</h1>
-    <button id="showStudents">Display students</button>
-    <div id="students"></div>
+    <main class="container">
+        <header class="card-header">
+            <span class="badge">Step 04 &bull; JSON Basics</span>
+            <h1>Students</h1>
+        </header>
+
+        <section class="card-body">
+            <div class="action-bar">
+                <div class="controls-row">
+                    <button id="showStudents" class="btn btn-primary" type="button">📥 Display students</button>
+                    <button id="toggleJsonBtn" class="btn btn-outline" type="button">{ } View Raw JSON</button>
+                </div>
+                <input type="text" id="searchInput" class="search-input" placeholder="Filter loaded students by name or city..." autocomplete="off">
+            </div>
+
+            <!-- Student Cards Grid -->
+            <div id="students"></div>
+
+            <!-- Raw JSON Viewer -->
+            <div id="jsonViewer" class="json-viewer-card">
+                <pre id="jsonContent"></pre>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
