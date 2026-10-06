@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Ali",
+        "city": "Lahore"
+    },
+    {
+        "id": 2,
+        "name": "Usman",
+        "city": "Islamabad"
+    },
+    {
+        "id": 3,
+        "name": "Aisha",
+        "city": "Karachi"
+    },
+    {
+        "id": 4,
+        "name": "Zain",
+        "city": "Peshawar"
+    }
+]

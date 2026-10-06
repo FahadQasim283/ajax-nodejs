@@ -1,0 +1,10 @@
+{
+  "name": "step-08-express-post-api",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
